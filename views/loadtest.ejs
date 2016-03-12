@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <script type="text/javascript">
+        var timerStart = Date.now();
+    </script>
+	<title>Testing my scalability</title>
+	<script type="text/javascript" src="/javascript/jquery.js"></script>
+	
+</head>
+<body>
+<button>Load Test</button>
+  <script type="text/javascript">
+   	$(document).ready(function() {
+      console.log("Time until DOMready: ", Date.now()-timerStart);
+  	});
+   	$(window).load(function() {
+      console.log("Time until everything loaded: ", Date.now()-timerStart);
+  	});
+  </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+	.DS_Store
+**/.DS_Store
+
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+build/Release
+
+node_modules/*
+
+public/vendor
+.DS_Store
+resources/scaleapp1.pem
