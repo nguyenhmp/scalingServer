@@ -9,13 +9,20 @@
     $(document).ready(function() {
       $('button').click(function(){
         var count = 0;
+        var start = true;
         var loadTest = setInterval(function(){
-          //SEND REQUEST
-        }, <TIME BETWEEN EACH REQUEST>);
-
+          $.ajax({
+            url: "http://localhost:3000",
+            dataType:'html'
+          }).done(function(html) {
+            count++
+            console.log(count)
+          });
+        },100) 
         setTimeout(function(){
-          clearInterval(loadTest);
-        }, <DURATION OF TEXT>)
+          alert(count + " request handled")
+          clearInterval(loadTest)
+        }, 5000)
       })
     });
 
