@@ -35,7 +35,6 @@ module.exports = (function(){
                                          "GROUP BY a.country "+
                                          "ORDER BY a.country, annual_profit desc " +
                                          "LIMIT 300";
-                                         console.log(getTopBusinessInCountryQuery)
       dbpool.getConnection(function(err, connection){
         if(err) return console.log(err);
         connection.query(getTopBusinessInCountryQuery, function(err, results){
