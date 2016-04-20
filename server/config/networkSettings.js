@@ -1,6 +1,6 @@
 module.exports = (function(){
 	return {
-		"dbPort": 3306,
-		"serverPort": 3000,
+  		"dbPort": 3306,
+  		"serverPort": 3000,
 	}
 })()		 
