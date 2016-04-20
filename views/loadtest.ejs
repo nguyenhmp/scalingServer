@@ -9,7 +9,7 @@
     $(document).ready(function() {
       $('button').click(function(){
         var count = 0;
-        var start = true;
+        //send 10 request a second and runs the test for 5 seconds
         var loadTest = setInterval(function(){
           $.ajax({
             url: "http://localhost:3000",
