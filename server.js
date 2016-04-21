@@ -10,6 +10,7 @@ var countries = ["Afghanistan", "Albania", "Algeria", "American Samoa", "Andorra
 var dbController = require('./server/controllers/dbController.js')
 
 server.set('view engine', 'ejs')
+server.set('views', __dirname + '/public/view')
 server.use(bodyParser.urlencoded({extended:true}))
 server.use(bodyParser.json());
 server.use(gzippo.staticGzip(__dirname + '/public'));
