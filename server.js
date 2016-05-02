@@ -16,6 +16,8 @@ server.use(bodyParser.urlencoded({extended:true}))
 server.use(bodyParser.json());
 server.use(gzippo.staticGzip(__dirname + '/public'));
 server.use(gzippo.compress());
+//this is to prevent CORS or cross origin error.
+//allows calls from our front end load tester to our back end
 server.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
