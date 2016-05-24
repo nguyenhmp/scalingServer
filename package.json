@@ -9,7 +9,9 @@
     "ejs": "^2.4.1",
     "express": "^4.13.4",
     "faker": "^3.1.0",
+    "gzippo": "^0.2.0",
     "mysql": "^2.10.2",
+    "node-cache": "^3.2.1",
     "randy": "^1.5.1",
     "underscore": "^1.8.3"
   }
