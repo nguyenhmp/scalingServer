@@ -1,4 +1,4 @@
-var dbModel = require('../model/dbModel.js')
+var dbModel = require('../models/dbModel.js')
 module.exports = (function(){
 	return dbModel;
 })()
