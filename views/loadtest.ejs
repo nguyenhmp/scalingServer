@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html>
   <title>Testing my scalability</title>
-  <script type="text/javascript" src="/javascript/jquery.js"></script>
+  <script type="text/javascript" src="../jquery.js"></script>
 </head>
 <body>
 <button>Load Test</button>
   <script type="text/javascript">
-    $(document).ready(function() {
-      $('button').click(function(){
-        var count = 0;
-        var loadTest = setInterval(function(){
-          //SEND REQUEST
-        }, <TIME BETWEEN EACH REQUEST>);
-
-        setTimeout(function(){
-          clearInterval(loadTest);
-        }, <DURATION OF TEXT>)
-      })
-    });
-
+  $(document).ready(function() {
+    $('button').click(function(){
+      var count = 0;
+      var start = true;
+      var loadTest = setInterval(function(){
+        $.ajax({
+          url: "http://localhost:3000",
+          dataType:'html'
+        }).done(function(html) {
+          count++
+          console.log(count)
+        });
+      },100) 
+      setTimeout(function(){
+        alert(count + " request handled")
+        clearInterval(loadTest)
+      }, 5000)
+    })
+  });
   </script>
 </body>
 </html>
