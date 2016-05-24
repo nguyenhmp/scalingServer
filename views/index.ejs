@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<doctype html>
+<html>
+    <script type="text/javascript">
+        var timerStart = Date.now();
+        //TIMER SCRIPT. USE Window.onLoad
+    </script>
+	<title>Testing my scalability</title>
+	<style type="text/css">
+
+	</style>
+	<script type="text/javascript" src="/javascript/jquery.js"></script>
+	<link rel="stylesheet" type="text/css" href="/css/960.css">
+	<link rel="stylesheet" type="text/css" href="/css/960_24_col.css">
+	<link rel="stylesheet" type="text/css" href="/css/960_24_col_rtl.css">
+	<link rel="stylesheet" type="text/css" href="/css/960_rtl.css">
+	<link rel="stylesheet" type="text/css" href="/css/demo.css">
+	<link rel="stylesheet" type="text/css" href="/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="/css/reset_rtl.css">
+	<link rel="stylesheet" type="text/css" href="/css/text_rtl.css">
+	<link rel="stylesheet" type="text/css" href="/css/text.css">
+	<link rel="stylesheet" type="text/css" href="/css/fluidable.css">
+	<link rel="stylesheet" type="text/css" href="/css/site.css">
+	<link rel="stylesheet" type="text/css" href="/css/colors.css">
+	<link rel="stylesheet" type="text/css" href="/css/responsive.css">
+	<link rel="stylesheet" type="text/css" href="/css/build-core+typography.css">
+	<link rel="stylesheet" type="text/css" href="/css/build-core+typography+responsive.css">
+	<link rel="stylesheet" type="text/css" href="/css/grids.css">
+	<link rel="stylesheet" type="text/css" href="/css/helpers.css">
+	<link rel="stylesheet" type="text/css" href="/css/build-full.css">
+	<link rel="stylesheet" type="text/css" href="/css/build-full-no-icons.css">
+	<link rel="stylesheet" type="text/css" href="/css/colors.css">
+	<link rel="stylesheet" type="text/css" href="/css/icons-ie7.css">
+	<link rel="stylesheet" type="text/css" href="/css/mobile-grids.css">
+	<link rel="stylesheet" type="text/css" href="/css/modern.css">
+	<link rel="stylesheet" type="text/css" href="/css/phone-grids.css">
+	<link rel="stylesheet" type="text/css" href="/css/print.css">
+	<link rel="stylesheet" type="text/css" href="/css/tables.css">
+	<link rel="stylesheet" type="text/css" href="/css/tablet-grids.css">
+	<link rel="stylesheet" type="text/css" href="/css/typography.css">
+	<link rel="stylesheet" type="text/css" href="/css/ink-legacy.css">
+	<link rel="stylesheet" type="text/css" href="/css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="/css/ink-flex.css">
+	<link rel="stylesheet" type="text/css" href="/css/core.css">
+	<link rel="stylesheet" type="text/css" href="/css/groundwork.css">
+	<link rel="stylesheet" type="text/css" href="/css/gumby.css">
+	<link rel="stylesheet" type="text/css" href="/css/groundwork-ui.css">
+	<link rel="stylesheet" type="text/css" href="/css/groundwork-responsive.css">
+	<link rel="stylesheet" type="text/css" href="/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="/css/base.css">
+	<link rel="stylesheet" type="text/css" href="/css/foundation.css">
+	<link rel="stylesheet" type="text/css" href="/css/tiptip.css">
+	<link rel="stylesheet" type="text/css" href="/css/prettify.css">
+	<link rel="stylesheet" type="text/css" href="/css/kickstart-slideshow.css">
+	<link rel="stylesheet" type="text/css" href="/css/kickstart-menus.css">
+	<link rel="stylesheet" type="text/css" href="/css/kickstart-grid.css">
+	<link rel="stylesheet" type="text/css" href="/css/kickstart-forms.css">
+	<link rel="stylesheet" type="text/css" href="/css/kickstart-buttons.css">
+	<link rel="stylesheet" type="text/css" href="/css/kickstart.css">
+	<link rel="stylesheet" type="text/css" href="/css/jquery.fancybox-1.3.4.css">
+	<style type="text/css">
+	img {
+		width:200px;
+		height:200px;
+	}
+	canvas {
+		width:200px;
+		height:200px;
+	}
+	#thousandOrdered {
+		height: 400px;
+		width:400px;
+		overflow-y: scroll;
+	}
+	#thousandOrdered th, td{
+		text-align: left;
+	}
+	</style>
+</head>
+<body>
+<div id="thousandOrdered">
+<table>
+	<thead>
+		<th>Business Name</th>
+		<th>Owner First Name</th>
+		<th>Owner Last Name</th>
+	</thead>
+	<tbody>
+		<% for (var i = 0; i < select.length; i++) { %>
+			<tr>
+				<td><%= select[i].business_name %></td>
+				<td><%= select[i].owner_first_name %></td>
+				<td><%= select[i].owner_last_name %></td>
+			</tr>
+		<%}%>
+	</tbody>
+</table>
+</div>
+<form action='/businesses' method="POST">
+	<select name="insertNumber">
+		<option value="2500">2500</option>
+		<option value="5000">5000</option>
+		<option value="7500">7500</option>
+		<option value="10000">10000</option>
+	</select>
+	<button type="submit">Insert</button>
+</form>
+<div class="imagesOne">
+	<img src="./images/1.png">
+	<img src="./images/2.png">
+	<img src="./images/3.png">
+	<img src="./images/4.png">
+</div>
+<div class="imagesOne">
+	<img src="./images/5.png">
+	<img src="./images/6.png">
+	<img src="./images/7.png">
+	<img src="./images/8.png">
+</div>
+<div>
+	<video width="320" height="240" controls>
+  <source src="/video1.mp4" type="video/mp4">
+</video>
+</div>
+</body>
+</html>
