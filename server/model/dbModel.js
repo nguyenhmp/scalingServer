@@ -12,19 +12,12 @@ module.exports = (function(){
 							console.log(err)
 							connection.release();
 						} else {
-							for(var i = 0; i < results.length; i++) {
-								for(var j = 0; j < results.length; j++) {
-									for(var k = 0; k < results.length; k++) {
-										if ( results[j].business_name < results[k].business_name ) {
-											var temp = results[k];
-											results[k] = results[j];
-											results[j] = temp;
-										}
-										if ( results[i].business_name < results[k].business_name ) {
-											var temp = results[k];
-											results[k] = results[i];
-											results[i] = temp;
-										}
+							for(var j = 0; j < results.length; j++) {
+								for(var k = 0; k < results.length; k++) {
+									if ( results[j].business_name < results[k].business_name ) {
+										var temp = results[k];
+										results[k] = results[j];
+										results[j] = temp;
 									}
 								}
 							}

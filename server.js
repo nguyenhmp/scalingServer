@@ -30,6 +30,10 @@ server.get('/', function(req, res, next){
   });
 })
 
+server.get('/loadTest', function(req, res, next){
+  res.status(200).render('loadTest');
+})
+
 server.post('/businesses', function(req, res, next){
   var number = req.body.insertNumber
   dbController.insertBusiness(number);
